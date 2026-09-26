@@ -382,6 +382,13 @@ td:first-child{font-weight:600; min-width:9rem}
 }
 @media (max-width:560px){ .kpis,.posters.two{grid-template-columns:1fr} }
 
+/* campaign kit */
+.ck-strip{display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px 2px 16px; margin:1.6rem 0 1.2rem}
+.ck-strip figure{margin:0; flex:0 0 min(340px,78%); scroll-snap-align:start}
+.ck-strip img{display:block; width:100%; height:auto; border:1px solid var(--line); box-shadow:0 18px 36px -22px rgba(26,21,18,.5)}
+.ck-strip figcaption{font-family:"Courier Prime",monospace; font-size:.85rem; color:var(--muted); margin-top:10px}
+.ck-btns{display:flex; flex-wrap:wrap; gap:12px}
+.ck-btns .btn{display:inline-block; text-decoration:none}
 </style>
 </head>
 <body>
@@ -799,6 +806,29 @@ td:first-child{font-weight:600; min-width:9rem}
             </table>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- 9 CAMPAIGN KIT -->
+  <section id="kit" aria-labelledby="kit-h">
+    <div class="wrap">
+      <div class="sec-head"><b>09</b> Campaign kit</div>
+      <div class="col">
+        <h2 id="kit-h">The campaign, in six slides</h2>
+        <p class="lede">A carousel I designed to pitch Unrated in one scroll. Browse it here, or open the original in Canva.</p>
+      </div>
+      <div class="ck-strip" tabindex="0" aria-label="Campaign kit slides, scroll sideways">
+        <figure><img src="canva-kit/01.jpg" alt="Slide 1: Unrated." loading="lazy" width="1080" height="1350"><figcaption>1 / 6 · Unrated.</figcaption></figure>
+        <figure><img src="canva-kit/02.jpg" alt="Slide 2: Women get scored everywhere" loading="lazy" width="1080" height="1350"><figcaption>2 / 6 · Women get scored everywhere</figcaption></figure>
+        <figure><img src="canva-kit/03.jpg" alt="Slide 3: The insight" loading="lazy" width="1080" height="1350"><figcaption>3 / 6 · The insight</figcaption></figure>
+        <figure><img src="canva-kit/04.jpg" alt="Slide 4: The idea, in three steps" loading="lazy" width="1080" height="1350"><figcaption>4 / 6 · The idea, in three steps</figcaption></figure>
+        <figure><img src="canva-kit/05.jpg" alt="Slide 5: 1971 to today" loading="lazy" width="1080" height="1350"><figcaption>5 / 6 · 1971 to today</figcaption></figure>
+        <figure><img src="canva-kit/06.jpg" alt="Slide 6: The limited edition" loading="lazy" width="1080" height="1350"><figcaption>6 / 6 · The limited edition</figcaption></figure>
+      </div>
+      <div class="ck-btns">
+        <a class="btn fill" href="https://www.canva.com/d/5bDbTXZgKGMZX0E" target="_blank" rel="noopener">View in Canva ↗</a>
+        <a class="btn" href="canva-kit/campaign-kit.pdf" download>Download PDF</a>
+        <a class="btn" href="https://www.canva.com/d/84mWTID-NMi4Fmd" target="_blank" rel="noopener">See all my work ↗</a>
       </div>
     </div>
   </section>
