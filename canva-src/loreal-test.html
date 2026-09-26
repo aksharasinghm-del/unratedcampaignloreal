@@ -1,0 +1,148 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Unrated kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#222}
+@page{size:1080px 1350px;margin:0}
+.pg{width:1080px;height:1350px;position:relative;overflow:hidden;page-break-after:always;break-after:page}
+.pg:last-child{page-break-after:auto;break-after:auto}
+</style>
+<style>
+:root{--paper:#F4EEE4;--card:#FBF8F2;--ink:#1A1512;--muted:#6A5E54;--line:#DCD2C4;--gold:#8C6C3A;--rouge:#B0142C;--night:#15110F;--nink:#F1E9DD}
+.pg{background:var(--paper);color:var(--ink);font-family:'Hanken Grotesk',sans-serif}
+.pg.night{background:var(--night);color:var(--nink)}
+.bod{font-family:'Bodoni Moda',serif}
+.mono{font-family:'Courier Prime',monospace}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;font-size:20px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.bot{position:absolute;left:72px;right:72px;bottom:60px;display:flex;justify-content:space-between;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.night .bot{color:#A99B8D}
+.swipe{position:absolute;pointer-events:none}
+.grain{position:absolute;inset:0;opacity:.35;background-image:radial-gradient(rgba(0,0,0,.06) 1px,transparent 1px);background-size:5px 5px}
+.night .grain{background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px)}
+/* p1 */
+.p1 .score{position:absolute;left:0;right:0;top:250px;text-align:center;font-size:520px;line-height:1;font-weight:500;letter-spacing:-.04em;color:var(--ink)}
+.p1 .unr{position:absolute;left:0;right:0;top:830px;text-align:center;font-style:italic;font-size:170px;font-weight:500;letter-spacing:-.02em}
+.p1 .unr span{color:var(--rouge)}
+.p1 .sub{position:absolute;left:0;right:0;top:1060px;text-align:center;font-size:30px;line-height:1.4;color:var(--muted)}
+/* p2 comments */
+.cm{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 30px;font-size:34px;box-shadow:0 18px 40px -22px rgba(60,30,10,.35)}
+.cm small{display:block;font-family:'Hanken Grotesk';font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.cm .x{position:relative;display:inline-block;white-space:nowrap}
+.cm .sw{position:absolute;left:-10px;right:-10px;top:50%;width:calc(100% + 20px);height:30px;transform:translateY(-45%)}
+.p2 h2{position:absolute;left:72px;right:72px;bottom:140px;font-size:92px;line-height:1;font-weight:500;letter-spacing:-.02em}
+.p2 h2 i{color:var(--rouge)}
+/* p3 */
+.p3 .q{position:absolute;left:72px;right:72px;top:220px;font-size:112px;line-height:1.02;font-weight:500;letter-spacing:-.025em}
+.p3 .q em{font-style:italic;position:relative;white-space:nowrap}
+.p3 .note{position:absolute;left:72px;width:620px;top:1010px;font-size:30px;line-height:1.45;color:#CDBFAF}
+.p3 .tag{position:absolute;right:72px;top:1010px;font-size:22px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+/* p4 */
+.nums{position:absolute;left:72px;right:72px;top:190px;display:flex;justify-content:space-between}
+.nums div{position:relative;font-size:84px;font-weight:500;width:84px;text-align:center}
+.p4 .big{position:absolute;left:0;right:0;top:330px;text-align:center;font-size:250px;font-style:italic;font-weight:500;letter-spacing:-.03em;line-height:1}
+.steps{position:absolute;left:72px;right:72px;top:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:36px 30px;height:470px;position:relative}
+.st b{font-family:'Bodoni Moda';font-size:80px;font-weight:500;color:var(--rouge);display:block;line-height:1;margin-bottom:18px}
+.st h4{font-size:36px;margin-bottom:14px}
+.st p{font-size:23px;line-height:1.45;color:var(--muted)}
+/* p5 */
+.half{position:absolute;left:0;right:0;height:675px}
+.half.a{top:0;background:#E7DDCC}
+.half.b{top:675px;background:var(--night);color:var(--nink)}
+.yr{position:absolute;left:72px;font-size:230px;font-weight:500;line-height:1;letter-spacing:-.03em}
+.half .t{position:absolute;left:72px;right:72px;font-size:52px;line-height:1.12;font-weight:500}
+/* p6 */
+.stick{position:absolute;left:560px;top:180px;width:360px;height:900px}
+.p6 h2{position:absolute;left:72px;top:230px;width:520px;font-size:128px;line-height:.95;font-weight:500;letter-spacing:-.03em}
+.p6 h2 i{color:var(--rouge)}
+.p6 .body{position:absolute;left:72px;top:720px;width:470px;font-size:28px;line-height:1.5;color:var(--muted)}
+.p6 .who{position:absolute;left:72px;right:72px;top:1080px;border-top:1px solid var(--line);padding-top:30px;display:flex;justify-content:space-between;font-size:24px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<filter id="lip" x="-5%" y="-40%" width="110%" height="180%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter>
+<linearGradient id="bullet" x1="0" x2="1"><stop offset="0" stop-color="#7E0B1E"/><stop offset=".45" stop-color="#C71A36"/><stop offset=".7" stop-color="#E24A5E"/><stop offset="1" stop-color="#8E0F23"/></linearGradient>
+<linearGradient id="gold" x1="0" x2="1"><stop offset="0" stop-color="#6E5228"/><stop offset=".3" stop-color="#D8B774"/><stop offset=".55" stop-color="#F3DFAE"/><stop offset=".8" stop-color="#A5834A"/><stop offset="1" stop-color="#5E451F"/></linearGradient>
+</defs></svg>
+
+<!-- 1 cover -->
+<section class="pg p1" data-document-role="page" data-label="Cover">
+  <div class="grain"></div>
+  <div class="top"><span>L'Oréal Paris</span><span style="color:var(--rouge)">Spec campaign</span></div>
+  <div class="score bod">6.4</div>
+  <svg class="swipe" style="left:90px;top:470px" width="900" height="120" viewBox="0 0 900 120"><path filter="url(#lip)" d="M18 78 C 180 44, 380 70, 520 58 S 790 36, 880 48" fill="none" stroke="#B0142C" stroke-width="46" stroke-linecap="round" opacity=".94"/></svg>
+  <div class="unr bod">Unrated<span>.</span></div>
+  <div class="sub">The beauty brand that refuses to score women,<br>and gives every woman a way to refuse it too.</div>
+  <div class="bot"><span>Campaign by Akshara Singh</span><span>01 / 06</span></div>
+</section>
+
+<!-- 2 the comments -->
+<section class="pg p2" data-document-role="page" data-label="The scores">
+  <div class="grain"></div>
+  <div class="top"><span>The problem</span><span>02 / 06</span></div>
+  <div class="cm mono" style="left:72px;top:170px;transform:rotate(-2deg)"><small>Teen selfie post</small><span class="x">rate me 1–10? be honest<svg class="sw" viewBox="0 0 300 30" preserveAspectRatio="none"><path filter="url(#lip)" d="M4 18 C 70 10, 160 20, 296 12" fill="none" stroke="#B0142C" stroke-width="11" stroke-linecap="round" opacity=".92"/></svg></span></div>
+  <div class="cm mono" style="left:400px;top:330px;transform:rotate(1.5deg)"><small>Comment section</small><span class="x">She's a 6. An 8 with makeup.<svg class="sw" viewBox="0 0 300 30" preserveAspectRatio="none"><path filter="url(#lip)" d="M4 18 C 70 10, 160 20, 296 12" fill="none" stroke="#B0142C" stroke-width="11" stroke-linecap="round" opacity=".92"/></svg></span></div>
+  <div class="cm mono" style="left:110px;top:490px;transform:rotate(-1deg)"><small>AI face-rating filter</small><span class="x">Your beauty score: 6.4<svg class="sw" viewBox="0 0 300 30" preserveAspectRatio="none"><path filter="url(#lip)" d="M4 18 C 70 10, 160 20, 296 12" fill="none" stroke="#B0142C" stroke-width="11" stroke-linecap="round" opacity=".92"/></svg></span></div>
+  <div class="cm mono" style="left:470px;top:640px;transform:rotate(2deg)"><small>Matrimonial ad, India</small><span class="x">Wanted: fair, slim, homely<svg class="sw" viewBox="0 0 300 30" preserveAspectRatio="none"><path filter="url(#lip)" d="M4 18 C 70 10, 160 20, 296 12" fill="none" stroke="#B0142C" stroke-width="11" stroke-linecap="round" opacity=".92"/></svg></span></div>
+  <div class="cm mono" style="left:80px;top:790px;transform:rotate(-2.5deg)"><small>Dating podcast</small><span class="x">Is she high-value?<svg class="sw" viewBox="0 0 300 30" preserveAspectRatio="none"><path filter="url(#lip)" d="M4 18 C 70 10, 160 20, 296 12" fill="none" stroke="#B0142C" stroke-width="11" stroke-linecap="round" opacity=".92"/></svg></span></div>
+  <div class="cm mono" style="left:540px;top:1075px;transform:rotate(1deg)"><small>Said to women over 40</small><span class="x">Not bad for your age.<svg class="sw" viewBox="0 0 300 30" preserveAspectRatio="none"><path filter="url(#lip)" d="M4 18 C 70 10, 160 20, 296 12" fill="none" stroke="#B0142C" stroke-width="11" stroke-linecap="round" opacity=".92"/></svg></span></div>
+  <h2 class="bod" style="top:960px;bottom:auto;width:420px;font-size:80px">Scored<br><i>everywhere.</i></h2>
+  <div class="bot"><span>Tap to cross it out</span><span>Unrated.</span></div>
+</section>
+
+<!-- 3 insight -->
+<section class="pg night p3" data-document-role="page" data-label="The insight">
+  <div class="grain"></div>
+  <div class="top"><span style="color:var(--gold)">The insight</span><span>03 / 06</span></div>
+  <div class="q bod">Beauty brands tell women they're beautiful. None help them deal with being <em>scored.<svg style="position:absolute;left:-10px;bottom:-26px;width:calc(100% + 10px)" height="60" viewBox="0 0 440 60" preserveAspectRatio="none"><path filter="url(#lip)" d="M8 36 C 120 22, 260 34, 430 20" fill="none" stroke="#E23A52" stroke-width="16" stroke-linecap="round"/></svg></em></div>
+  <div class="note">And because the beauty industry helped create these scores, a beauty brand refusing them would mean something.</div>
+  <div class="tag">L'Oréal Paris · 2026</div>
+  <div class="bot"><span>Research · strategy · idea</span><span>Unrated.</span></div>
+</section>
+
+<!-- 4 idea -->
+<section class="pg p4" data-document-role="page" data-label="The idea">
+  <div class="grain"></div>
+  <div class="top"><span>The idea</span><span>04 / 06</span></div>
+  <div class="nums bod"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div></div>
+  <svg class="swipe" style="left:50px;top:210px" width="980" height="90" viewBox="0 0 980 90"><path filter="url(#lip)" d="M14 50 C 250 30, 520 58, 760 38 S 930 34, 966 40" fill="none" stroke="#B0142C" stroke-width="30" stroke-linecap="round" opacity=".94"/></svg>
+  <div class="big bod">Unrated<span style="color:var(--rouge)">.</span></div>
+  <div style="position:absolute;left:0;right:0;top:600px;text-align:center;font-size:30px;color:var(--muted)">A filter, ads and a public stand that cross out the scores women are given.</div>
+  <div class="steps">
+    <div class="st"><b>1</b><h4>Show it</h4><p>Teaser ads show only scores, "6.4", "7/10", so people notice how normal rating women has become.</p></div>
+    <div class="st"><b>2</b><h4>Cross it out</h4><p>The Unrated AR filter crosses every score out in lipstick red. Women use it to answer their own "rate me" posts.</p></div>
+    <div class="st"><b>3</b><h4>Change it</h4><p>An open letter asks apps to stop scoring teenagers, signed by the brand and by women everywhere.</p></div>
+  </div>
+  <div class="bot"><span>Instagram · TikTok · Snapchat · OOH · PR</span><span>Unrated.</span></div>
+</section>
+
+<!-- 5 1971 -->
+<section class="pg p5" data-document-role="page" data-label="1971 to today">
+  <div class="half a"><div class="grain"></div>
+    <div class="top" style="color:var(--gold)"><span>New York</span><span style="color:var(--ink)">05 / 06</span></div>
+    <div class="yr bod" style="top:170px">1971</div>
+    <div class="t bod" style="top:430px">A woman decides her own value. The enemy: <i>men in a boardroom.</i></div>
+  </div>
+  <div class="half b"><div class="grain"></div>
+    <div class="yr bod" style="top:90px;color:var(--nink)">2026</div>
+    <div class="t bod" style="top:350px">Same fight. The enemy now: <i style="color:#E23A52">a number in a comment section.</i></div>
+    <div class="bot"><span>Taking the tagline back to what it meant</span><span>Unrated.</span></div>
+  </div>
+</section>
+
+<!-- 6 lipstick + credits -->
+<section class="pg p6" data-document-role="page" data-label="Limited edition and credits">
+  <div class="grain"></div>
+  <div class="top"><span>The limited edition</span><span>06 / 06</span></div>
+  <h2 class="bod">Shade<br>No. <span style="display:inline-block;width:110px;height:10px;background:var(--rouge);vertical-align:middle;margin-left:10px"></span></h2>
+  <div class="body">A limited-edition red with no number on the tube. The one shade in the range that refuses a score. Proceeds fund work against online harassment.</div>
+  <svg class="stick" viewBox="0 0 360 900">
+    <path d="M110 250 L110 120 Q110 40 200 20 L250 10 L250 250 Z" fill="url(#bullet)"/>
+    <rect x="96" y="240" width="168" height="170" rx="6" fill="url(#gold)"/>
+    <rect x="80" y="400" width="200" height="470" rx="10" fill="#1A1512"/>
+    <rect x="80" y="400" width="200" height="16" fill="url(#gold)"/>
+    <text x="180" y="640" text-anchor="middle" font-family="Bodoni Moda" font-style="italic" font-size="40" fill="#F1E9DD" transform="rotate(-90 180 640)">Unrated.</text>
+    
+  </svg>
+  <div class="who"><span><b>Akshara Singh</b> · brand audit, research, strategy, idea, social plan, copy &amp; design</span></div>
+  <div class="bot" style="font-size:15px"><span>Spec work for a portfolio. Not affiliated with or endorsed by L'Oréal.</span><span>Akshara.singh.marketing@gmail.com</span></div>
+</section>
+</body></html>
